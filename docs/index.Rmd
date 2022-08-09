@@ -1,9 +1,9 @@
 ---
-title: "Criação, manutenção e divulgação de projetos de História em meios digitais"
-subtitle: "<br>git, GitHub e o Programming Historian<br><br><br><br><br>"
-description: "Webinar do LHUD (FGV/CPDOC)"
+title: "Humanidades e História Digital"
+subtitle: "<br>Pensando futuros (presentes?) da pesquisa<br><br><br><br><br>"
+description: "Live para o PPGH da UFES"
 author: "Eric Brasil (IHLM/UNILAB)<br>ericbrasiln@proton.me"
-date: "<br>20 de maio de 2022<br>Webinar do LHUD-FGV/CPDOC<br><br>[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6566754.svg)](https://doi.org/10.5281/zenodo.6566754)"
+date: "<br>10 de agosto de 2022<br><br>[![DOI - em breve](https://zenodo.org/badge/DOI/10.5281/zenodo.6566754.svg)](https://doi.org/10.5281/zenodo.6566754)"
 encoding: "UTF-8"
 output:
   xaringan::moon_reader:
@@ -41,7 +41,7 @@ library(widgetframe)
 ---
 class: bg_green, center, middle
 
-# Como é que se começa um projeto em história?
+# Como é que se começa um projeto em história atualmente?
 
 ---
 class: bg_yellow, center, middle
@@ -57,9 +57,58 @@ class: bg_yellow, center, middle
 ### - Você já comprendeu "como suas fontes digitais foram criadas, e como ficaram disponíveis para você" (BLANEY, et al. 2021. p. 44)
 
 ---
+class: bg_green, center, middle
+
+# E o que isso tem a ver com Humanidades Digitais?
+
+---
 class: bg_yellow, center, middle
 
-## Como coletar e organizar esses dados?
+## Longa história das tecnologias com as pesquisas em Humanidades
+<br>
+
+--
+### -  Index Thomisticus
+<br>
+
+--
+### - Computadores e Humanidades antes das Humanidades Digitais
+
+---
+class: bg_green, center, middle
+
+# Voltando para a História, onde estamos nessa conversa?
+
+---
+class: bg_yellow, center, middle
+
+## Muitas histórias ao longo do século XX e XXI
+<br>
+
+--
+### - [Technology and the Historian: Transformations in the Digital](https://www.press.uillinois.edu/books/?id=p085697) Age de Adam Crymble
+
+---
+class: bg_yellow, center, middle
+
+## Ok, mas hoje somos todos historiadores digitais?
+<br>
+
+--
+### - [The Transformation of Historical Research in the Digital Age](https://www.cambridge.org/core/elements/transformation-of-historical-research-in-the-digital-age/30DFBEAA3B753370946B7A98045CFEF4#) de Ian Milligan
+
+---
+class: bg_green, center, middle
+# O oceano de dados está aqui. Como encontrar algo relevante?
+<br>
+```{r, out.width="50%"}
+knitr::include_graphics("https://i.giphy.com/media/Xch9I90tRezyicQgma/giphy.webp")
+```
+
+---
+class: bg_yellow, center, middle
+
+## Como coletamos e organizamos nossos dados?
 <br>
 
 --
@@ -98,11 +147,6 @@ class: bg_yellow, center, middle
 ---
 class: bg_yellow, center, middle
 
-## História Digital = Colaboração, abertura, compartilhamento
-
----
-class: bg_yellow, center, middle
-
 ## Como gerenciar seus dados e mantê-los seguros?
 <br>
 
@@ -122,212 +166,9 @@ class: bg_yellow, center, middle
 ### - Preservação (como os dados podem ser mantidos para uso no futuro)
 
 ---
-class: bg_green, center, middle
-
-# Controle de versões como método de documentação da pesquisa
-
----
-class: bg_yellow, center, middle
-## Você já fez isso?
-<br>
---
-.pull-left[
-
-### - trabalho_final.docx
-### - trabalho_final2.docx
-### - trabalho_final_final.docx
-]
---
-.pull-right[
-
-### - trabalho_final_revisão.docx
-### - trabalho_final_corrigido.docx
-### - trabalho_final_ok_enviar.docx
-]
-
----
 class: bg_yellow, center, middle
 
-## É fundamental criar um plano para organização, documentação, preservação e compartilhamento dos dados, métodos e resultados da pequisa.
-
-<br>
-
-### Veja essa lição de [James Backer sobre preservação dos dados de investigação](https://programminghistorian.org/pt/licoes/preservar-os-seus-dados-de-investigacao) para outras estratégias e referências.
-
----
-class: bg_yellow, center, middle
-## Podemos enfrentar boa parte desses desafios utilizando programas de controle de versões, como o git.
-
----
-class: bg_yellow, center, middle
-
-# Mas afinal, o que é o [git](https://git-scm.com/)?
-<br>
-
-```{r, out.width="20%"}
-knitr::include_graphics("img/git.png")
-```
-
----
-class: bg_yellow, center, middle
-###	- Sistema de controle de versões
-<br>
-
---
-###	- Distribuído
-<br>
-
---
-###	- Repositório Local
-<br>
-
---
-### - Livre e gratuito
-
----
-class: bg_yellow, center, middle
-
-## Vantagens
-<br>
-
-.pull-left[
-###	- Controle de histórico
-<br>
-
-###	- Trabalho em equipe
-<br>
-
-###	- Ramificações (Branches)
-<br>
-]
-.pull-right[
-
-###	- Segurança
-<br>
-
-###	- Organização
-<br>
-
-###	- Integração com repositórios remotos (como o GitHub)
-]
-
----
-class: bg_yellow, center, middle
-
-## Desvantagens
-<br>
-
-.pull-left[
-###	- Curva de aprendizagem mais elevada
-<br>
-
-###	- Maior dificuldade de lidar com arquivos zippados/compactados
-
-<br>
-]
-.pull-right[
-
-###	- Pode gerar históricos muito pesados
-<br>
-
-###	- Repositório Local
-
-]
-
----
-class: bg_yellow, center, middle
-## Documentando o processo
-<br>
-
---
-### - mensagens de commit 
-<br>
-
---
-### - criação de README.md em cada pasta
-<br>
-
---
-### - Encarar o processo de documentação como um processo público, mesmo que não seja publicado. 
-
----
-class: bg_green, middle, center
-
-# E o GitHub?
-
-```{r, out.width="20%"}
-knitr::include_graphics("img/gh.png")
-```
-
----
-class: bg_yellow, middle, center
-
-## Plataforma de hospedagem de códigos e arquivos
-<br>
-
---
-### - Possui controle de versões utilizando Git;
-<br>
-
---
-### - Rede Social;
-
----
-class: bg_yellow, middle, center
-## Características
-<br>
-
---
-
-.pull-left[
-
-###	- Colaboração e trabalho com equipes grandes
-<br>
-
-###	- Repositórios ilimitados
-<br>
-
-###	- Gestão de projetos
-<br>
-]
-
---
-
-.pull-right[
-
-###	- Automação de tarefas (GitHub Actions)
-<br>
-
-###	- Deploy de páginas estáticas (GitHub Pages, Netlify)
-<br>
-
-###	- Integração com o [Zenodo](https://zenodo.org/)
-]
-
----
-class: bg_green, middle, center
-
-# O caso do Programming Historian
-
-```{r, out.width="20%"}
-knitr::include_graphics("img/ph.png")
-```
-
----
-class: bg_yellow, middle, center
-
-## O que é? 
-<br>
---
-
-### "Publicamos tutoriais acessíveis, avaliados por pares, que ajudam os humanistas a aprender uma ampla gama de ferramentas digitais, técnicas computacionais e metodologias de trabalho que facilitam a pesquisa e o ensino."
-
----
-class: bg_yellow, middle, center
-## Vamos ver um exemplo? [Aqui](https://github.com/programminghistorian)
-<br>
-
-### "O Programming Historian tem como objetivo influenciar como a comunidade de história digital convida colaboradores, revisa seu trabalho e o publica." (McClurken,2016)
+## Colaboração, abertura, compartilhamento
 
 ---
 class: bg_green, middle, center
@@ -337,8 +178,6 @@ class: bg_green, middle, center
 ---
 class: bg_yellow, middle, center
 
---
-
 ### - O digital substituirá as ferramentas básicas da operação historiográfica?
 <br>
 
@@ -347,15 +186,8 @@ class: bg_yellow, middle, center
 
 ---
 class: bg_yellow, middle, center
-## Para saber mais sobre aspectos práticos do git e GitHub, [acesse o link](https://gitegithub.netlify.app/).
 
----
-class: bg_yellow, middle, center
-
-## [Clique aqui](biblio.html) para acessar a bibliografia usada nessa apresentação
-<br>
-
-## E acesse nossa biblioteca de referências **História Digital** no Zotero, [clicando aqui](https://www.zotero.org/groups/2216280/histria_digital/library).
+## Acesse a biblioteca de referências **História Digital** no Zotero, [clicando aqui](https://www.zotero.org/groups/2216280/histria_digital/library).
 ---
 class: bg_yellow, middle, center
 
@@ -388,14 +220,14 @@ knitr::include_graphics("img/logo_hist.png")
 ### email: [historia.ba@unilab.edu.br ](mailto:historia.ba@unilab.edu.br)
 
 ```{r, out.width="22%"}
-knitr::include_graphics("img/logo_unilab.png")
+knitr::include_graphics("img/logo_unilab.png", error=FALSE)
 ```
 
 ---
 class: bg_yellow, middle, center
 
 ```{r, out.width="20%"}
-knitr::include_graphics("img/logo_MA_color.png")
+knitr::include_graphics("img/logo_MA_color.png", error=FALSE)
 ```
 
 ## Laboratório de Humanidades Digitais da UFBA
@@ -417,11 +249,11 @@ class: title-slide-final, middle, center
 ## Agradecimentos especiais:
 <br> 
 
-## Ao Jimmy pelo convite e mediação, Juliana pela participação e ao público pela escuta e debate.
+## À Cristina Maria Dadalto pelo convite e ao público pela escuta e debate.
 ]
 
 .pull-right[
 ```{r, out.width="90%"}
-knitr::include_graphics("https://media2.giphy.com/media/3o6wNIV9FP28JIleyk/giphy.gif?cid=ecf05e47zu5xdrqbq7ehu5dmzo76n6nqww430nqs4z5ppy8b&rid=giphy.gif&ct=g")
+knitr::include_graphics("https://media1.giphy.com/media/3o6wNIV9FP28JIleyk/giphy.gif?cid=790b761122702fc03784413d1e84fbe31a5613b955b9bf24&rid=giphy.gif&ct=g")
 ```
 ]
