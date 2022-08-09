@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Criação, manutenção e divulgação de projetos de História em meios digitais</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Eric Brasil (IHLM/UNILAB) ericbrasiln@proton.me" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="css/yellow.css" type="text/css" />
+    <link rel="stylesheet" href="css/yellow-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Criação, manutenção e divulgação de projetos de História em meios digitais
+]
+.subtitle[
+## <br>git, GitHub e o Programming Historian<br><br><br><br><br>
+]
+.author[
+### Eric Brasil (IHLM/UNILAB)<br><a href="mailto:ericbrasiln@proton.me" class="email">ericbrasiln@proton.me</a>
+]
+.date[
+### <br>20 de maio de 2022<br>Webinar do LHUD-FGV/CPDOC<br><br><a href="https://doi.org/10.5281/zenodo.6566754"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6566754.svg" alt="DOI" /></a>
+]
+
+---
+
+layout: true
+
+
+
+
+---
+class: bg_green, center, middle
+
+# Como é que se começa um projeto em história?
+
+---
+class: bg_yellow, center, middle
+
+### - Suas fontes são digitais ou digitalizadas?
+&lt;br&gt;
+
+--
+### - Você já possui ou criou uma versão legível por computador dos seus dados.
+&lt;br&gt;
+
+--
+### - Você já comprendeu "como suas fontes digitais foram criadas, e como ficaram disponíveis para você" (BLANEY, et al. 2021. p. 44)
+
+---
+class: bg_yellow, center, middle
+
+## Como coletar e organizar esses dados?
+&lt;br&gt;
+
+--
+### - CSV, JSON, XML, TEI, RDF
+&lt;br&gt;
+
+--
+### - PDF, JPG
+&lt;br&gt;
+
+--
+### - Como lidar com esses diferentes formatos?
+&lt;br&gt;
+
+--
+### - Metadados? Navegar, descobrir e organizar. Mas também um objeto em si mesmo (BLANEY, et al. 2021. p. 61)
+
+---
+class: bg_yellow, center, middle
+
+## Compreender esse processo deve ser tarefa básica em nossa profissão.
+
+---
+class: bg_yellow, center, middle
+
+### "Os métodos de pesquisa digital criam demandas novas e às vezes mais rigorosas de precisão, pensamento metodológico, auto-organização e colaboração do que a pesquisa histórica tradicional" (FRIDLUND; OIVA; PAJU, 2020, pos. 543).
+
+---
+class: bg_yellow, center, middle
+
+## Letramento Arquivístico Digital
+&lt;br&gt;
+
+### "O Letramento arquivístico digital requer a compreensão de como a produção de arquivos digitais se baseia em designs técnicos que influenciam a sua usabilidade. Isso significa que (todos) os historiadores precisam adquirir competência digital em um nível profissional paralelo às habilidades que temos em compreender como a classificação e categorização de fontes afetam nossa interação com arquivos analógicos e moldam nossas questões de pesquisa. (JENSEN, 2021, p. 6)"
+
+---
+class: bg_yellow, center, middle
+
+## História Digital = Colaboração, abertura, compartilhamento
+
+---
+class: bg_yellow, center, middle
+
+## Como gerenciar seus dados e mantê-los seguros?
+&lt;br&gt;
+
+--
+### - Metadados (como você descreve seus dados, tanto internamente quanto externamente)
+&lt;br&gt;
+
+--
+### - Controle de versões (o que fazer se você fizer uma lambança no processo)
+&lt;br&gt;
+
+--
+### - Documentação (uma descrição narrativa do projeto)
+&lt;br&gt;
+
+--
+### - Preservação (como os dados podem ser mantidos para uso no futuro)
+
+---
+class: bg_green, center, middle
+
+# Controle de versões como método de documentação da pesquisa
+
+---
+class: bg_yellow, center, middle
+## Você já fez isso?
+&lt;br&gt;
+--
+.pull-left[
+
+### - trabalho_final.docx
+### - trabalho_final2.docx
+### - trabalho_final_final.docx
+]
+--
+.pull-right[
+
+### - trabalho_final_revisão.docx
+### - trabalho_final_corrigido.docx
+### - trabalho_final_ok_enviar.docx
+]
+
+---
+class: bg_yellow, center, middle
+
+## É fundamental criar um plano para organização, documentação, preservação e compartilhamento dos dados, métodos e resultados da pequisa.
+
+&lt;br&gt;
+
+### Veja essa lição de [James Backer sobre preservação dos dados de investigação](https://programminghistorian.org/pt/licoes/preservar-os-seus-dados-de-investigacao) para outras estratégias e referências.
+
+---
+class: bg_yellow, center, middle
+## Podemos enfrentar boa parte desses desafios utilizando programas de controle de versões, como o git.
+
+---
+class: bg_yellow, center, middle
+
+# Mas afinal, o que é o [git](https://git-scm.com/)?
+&lt;br&gt;
+
+&lt;img src="img/git.png" width="20%" style="display: block; margin: auto;" /&gt;
+
+---
+class: bg_yellow, center, middle
+###	- Sistema de controle de versões
+&lt;br&gt;
+
+--
+###	- Distribuído
+&lt;br&gt;
+
+--
+###	- Repositório Local
+&lt;br&gt;
+
+--
+### - Livre e gratuito
+
+---
+class: bg_yellow, center, middle
+
+## Vantagens
+&lt;br&gt;
+
+.pull-left[
+###	- Controle de histórico
+&lt;br&gt;
+
+###	- Trabalho em equipe
+&lt;br&gt;
+
+###	- Ramificações (Branches)
+&lt;br&gt;
+]
+.pull-right[
+
+###	- Segurança
+&lt;br&gt;
+
+###	- Organização
+&lt;br&gt;
+
+###	- Integração com repositórios remotos (como o GitHub)
+]
+
+---
+class: bg_yellow, center, middle
+
+## Desvantagens
+&lt;br&gt;
+
+.pull-left[
+###	- Curva de aprendizagem mais elevada
+&lt;br&gt;
+
+###	- Maior dificuldade de lidar com arquivos zippados/compactados
+
+&lt;br&gt;
+]
+.pull-right[
+
+###	- Pode gerar históricos muito pesados
+&lt;br&gt;
+
+###	- Repositório Local
+
+]
+
+---
+class: bg_yellow, center, middle
+## Documentando o processo
+&lt;br&gt;
+
+--
+### - mensagens de commit 
+&lt;br&gt;
+
+--
+### - criação de README.md em cada pasta
+&lt;br&gt;
+
+--
+### - Encarar o processo de documentação como um processo público, mesmo que não seja publicado. 
+
+---
+class: bg_green, middle, center
+
+# E o GitHub?
+
+&lt;img src="img/gh.png" width="20%" style="display: block; margin: auto;" /&gt;
+
+---
+class: bg_yellow, middle, center
+
+## Plataforma de hospedagem de códigos e arquivos
+&lt;br&gt;
+
+--
+### - Possui controle de versões utilizando Git;
+&lt;br&gt;
+
+--
+### - Rede Social;
+
+---
+class: bg_yellow, middle, center
+## Características
+&lt;br&gt;
+
+--
+
+.pull-left[
+
+###	- Colaboração e trabalho com equipes grandes
+&lt;br&gt;
+
+###	- Repositórios ilimitados
+&lt;br&gt;
+
+###	- Gestão de projetos
+&lt;br&gt;
+]
+
+--
+
+.pull-right[
+
+###	- Automação de tarefas (GitHub Actions)
+&lt;br&gt;
+
+###	- Deploy de páginas estáticas (GitHub Pages, Netlify)
+&lt;br&gt;
+
+###	- Integração com o [Zenodo](https://zenodo.org/)
+]
+
+---
+class: bg_green, middle, center
+
+# O caso do Programming Historian
+
+&lt;img src="img/ph.png" width="20%" style="display: block; margin: auto;" /&gt;
+
+---
+class: bg_yellow, middle, center
+
+## O que é? 
+&lt;br&gt;
+--
+
+### "Publicamos tutoriais acessíveis, avaliados por pares, que ajudam os humanistas a aprender uma ampla gama de ferramentas digitais, técnicas computacionais e metodologias de trabalho que facilitam a pesquisa e o ensino."
+
+---
+class: bg_yellow, middle, center
+## Vamos ver um exemplo? [Aqui](https://github.com/programminghistorian)
+&lt;br&gt;
+
+### "O Programming Historian tem como objetivo influenciar como a comunidade de história digital convida colaboradores, revisa seu trabalho e o publica." (McClurken,2016)
+
+---
+class: bg_green, middle, center
+
+# Seremos todos programadores?
+
+---
+class: bg_yellow, middle, center
+
+--
+
+### - O digital substituirá as ferramentas básicas da operação historiográfica?
+&lt;br&gt;
+
+--
+### - Como isso afeta a construção do conhecimento histórico?
+
+---
+class: bg_yellow, middle, center
+## Para saber mais sobre aspectos práticos do git e GitHub, [acesse o link](https://gitegithub.netlify.app/).
+
+---
+class: bg_yellow, middle, center
+
+## [Clique aqui](biblio.html) para acessar a bibliografia usada nessa apresentação
+&lt;br&gt;
+
+## E acesse nossa biblioteca de referências **História Digital** no Zotero, [clicando aqui](https://www.zotero.org/groups/2216280/histria_digital/library).
+---
+class: bg_yellow, middle, center
+
+## Eric Brasil
+&lt;br&gt;
+
+### Email: [ericbrasiln@proton.me](mailto:ericbrasiln@proton.me)
+
+### GitHub: [ericbrasiln](https://github.com/ericbrasiln/)
+
+### Twitter: [ericbrasiln](http://www.twitter.com/ericbrailn) 
+
+### [Orcid](https://orcid.org/0000-0001-5067-8475) - [Lattes](http://lattes.cnpq.br/6853705640900524)
+
+### [Site pessoal](https://ericbrasiln.github.io)
+
+---
+class: bg_yellow, middle, center
+
+&lt;img src="img/logo_hist.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+## Curso de Licenciatura em História
+
+### Instituto de Humanidades e Letras do campus dos Malês, Unilab
+
+### [Site do curso](historia.males.unilab.edu.br/) 
+
+### email: [historia.ba@unilab.edu.br ](mailto:historia.ba@unilab.edu.br)
+
+&lt;img src="img/logo_unilab.png" width="22%" style="display: block; margin: auto;" /&gt;
+
+---
+class: bg_yellow, middle, center
+
+&lt;img src="img/logo_MA_color.png" width="20%" style="display: block; margin: auto;" /&gt;
+
+## Laboratório de Humanidades Digitais da UFBA
+
+### Twitter: [labhdufba](https://twitter.com/labhdufba) 
+
+### Instagram: [labhdufba](http://instagram.com/labhdufba)
+
+### Github: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
+
+---
+class: title-slide-final, middle, center
+
+# Obrigado, gente!
+
+.pull-left[
+&lt;br&gt;
+
+## Agradecimentos especiais:
+&lt;br&gt; 
+
+## Ao Jimmy pelo convite e mediação, Juliana pela participação e ao público pela escuta e debate.
+]
+
+.pull-right[
+&lt;img src="https://media2.giphy.com/media/3o6wNIV9FP28JIleyk/giphy.gif?cid=ecf05e47zu5xdrqbq7ehu5dmzo76n6nqww430nqs4z5ppy8b&amp;rid=giphy.gif&amp;ct=g" width="90%" style="display: block; margin: auto;" /&gt;
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="libs/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

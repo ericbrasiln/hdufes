@@ -1,0 +1,427 @@
+---
+title: "Criação, manutenção e divulgação de projetos de História em meios digitais"
+subtitle: "<br>git, GitHub e o Programming Historian<br><br><br><br><br>"
+description: "Webinar do LHUD (FGV/CPDOC)"
+author: "Eric Brasil (IHLM/UNILAB)<br>ericbrasiln@proton.me"
+date: "<br>20 de maio de 2022<br>Webinar do LHUD-FGV/CPDOC<br><br>[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6566754.svg)](https://doi.org/10.5281/zenodo.6566754)"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: ["css/yellow.css", "css/yellow-fonts.css"]
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      beforeInit: "https://platform.twitter.com/widgets.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+editor_options: 
+  chunk_output_type: console
+---
+layout: true
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(
+	echo = FALSE,
+	fig.align = "center",
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE
+)
+```
+
+```{r eval=FALSE, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(widgetframe)
+```
+---
+class: bg_green, center, middle
+
+# Como é que se começa um projeto em história?
+
+---
+class: bg_yellow, center, middle
+
+### - Suas fontes são digitais ou digitalizadas?
+<br>
+
+--
+### - Você já possui ou criou uma versão legível por computador dos seus dados.
+<br>
+
+--
+### - Você já comprendeu "como suas fontes digitais foram criadas, e como ficaram disponíveis para você" (BLANEY, et al. 2021. p. 44)
+
+---
+class: bg_yellow, center, middle
+
+## Como coletar e organizar esses dados?
+<br>
+
+--
+### - CSV, JSON, XML, TEI, RDF
+<br>
+
+--
+### - PDF, JPG
+<br>
+
+--
+### - Como lidar com esses diferentes formatos?
+<br>
+
+--
+### - Metadados? Navegar, descobrir e organizar. Mas também um objeto em si mesmo (BLANEY, et al. 2021. p. 61)
+
+---
+class: bg_yellow, center, middle
+
+## Compreender esse processo deve ser tarefa básica em nossa profissão.
+
+---
+class: bg_yellow, center, middle
+
+### "Os métodos de pesquisa digital criam demandas novas e às vezes mais rigorosas de precisão, pensamento metodológico, auto-organização e colaboração do que a pesquisa histórica tradicional" (FRIDLUND; OIVA; PAJU, 2020, pos. 543).
+
+---
+class: bg_yellow, center, middle
+
+## Letramento Arquivístico Digital
+<br>
+
+### "O Letramento arquivístico digital requer a compreensão de como a produção de arquivos digitais se baseia em designs técnicos que influenciam a sua usabilidade. Isso significa que (todos) os historiadores precisam adquirir competência digital em um nível profissional paralelo às habilidades que temos em compreender como a classificação e categorização de fontes afetam nossa interação com arquivos analógicos e moldam nossas questões de pesquisa. (JENSEN, 2021, p. 6)"
+
+---
+class: bg_yellow, center, middle
+
+## História Digital = Colaboração, abertura, compartilhamento
+
+---
+class: bg_yellow, center, middle
+
+## Como gerenciar seus dados e mantê-los seguros?
+<br>
+
+--
+### - Metadados (como você descreve seus dados, tanto internamente quanto externamente)
+<br>
+
+--
+### - Controle de versões (o que fazer se você fizer uma lambança no processo)
+<br>
+
+--
+### - Documentação (uma descrição narrativa do projeto)
+<br>
+
+--
+### - Preservação (como os dados podem ser mantidos para uso no futuro)
+
+---
+class: bg_green, center, middle
+
+# Controle de versões como método de documentação da pesquisa
+
+---
+class: bg_yellow, center, middle
+## Você já fez isso?
+<br>
+--
+.pull-left[
+
+### - trabalho_final.docx
+### - trabalho_final2.docx
+### - trabalho_final_final.docx
+]
+--
+.pull-right[
+
+### - trabalho_final_revisão.docx
+### - trabalho_final_corrigido.docx
+### - trabalho_final_ok_enviar.docx
+]
+
+---
+class: bg_yellow, center, middle
+
+## É fundamental criar um plano para organização, documentação, preservação e compartilhamento dos dados, métodos e resultados da pequisa.
+
+<br>
+
+### Veja essa lição de [James Backer sobre preservação dos dados de investigação](https://programminghistorian.org/pt/licoes/preservar-os-seus-dados-de-investigacao) para outras estratégias e referências.
+
+---
+class: bg_yellow, center, middle
+## Podemos enfrentar boa parte desses desafios utilizando programas de controle de versões, como o git.
+
+---
+class: bg_yellow, center, middle
+
+# Mas afinal, o que é o [git](https://git-scm.com/)?
+<br>
+
+```{r, out.width="20%"}
+knitr::include_graphics("img/git.png")
+```
+
+---
+class: bg_yellow, center, middle
+###	- Sistema de controle de versões
+<br>
+
+--
+###	- Distribuído
+<br>
+
+--
+###	- Repositório Local
+<br>
+
+--
+### - Livre e gratuito
+
+---
+class: bg_yellow, center, middle
+
+## Vantagens
+<br>
+
+.pull-left[
+###	- Controle de histórico
+<br>
+
+###	- Trabalho em equipe
+<br>
+
+###	- Ramificações (Branches)
+<br>
+]
+.pull-right[
+
+###	- Segurança
+<br>
+
+###	- Organização
+<br>
+
+###	- Integração com repositórios remotos (como o GitHub)
+]
+
+---
+class: bg_yellow, center, middle
+
+## Desvantagens
+<br>
+
+.pull-left[
+###	- Curva de aprendizagem mais elevada
+<br>
+
+###	- Maior dificuldade de lidar com arquivos zippados/compactados
+
+<br>
+]
+.pull-right[
+
+###	- Pode gerar históricos muito pesados
+<br>
+
+###	- Repositório Local
+
+]
+
+---
+class: bg_yellow, center, middle
+## Documentando o processo
+<br>
+
+--
+### - mensagens de commit 
+<br>
+
+--
+### - criação de README.md em cada pasta
+<br>
+
+--
+### - Encarar o processo de documentação como um processo público, mesmo que não seja publicado. 
+
+---
+class: bg_green, middle, center
+
+# E o GitHub?
+
+```{r, out.width="20%"}
+knitr::include_graphics("img/gh.png")
+```
+
+---
+class: bg_yellow, middle, center
+
+## Plataforma de hospedagem de códigos e arquivos
+<br>
+
+--
+### - Possui controle de versões utilizando Git;
+<br>
+
+--
+### - Rede Social;
+
+---
+class: bg_yellow, middle, center
+## Características
+<br>
+
+--
+
+.pull-left[
+
+###	- Colaboração e trabalho com equipes grandes
+<br>
+
+###	- Repositórios ilimitados
+<br>
+
+###	- Gestão de projetos
+<br>
+]
+
+--
+
+.pull-right[
+
+###	- Automação de tarefas (GitHub Actions)
+<br>
+
+###	- Deploy de páginas estáticas (GitHub Pages, Netlify)
+<br>
+
+###	- Integração com o [Zenodo](https://zenodo.org/)
+]
+
+---
+class: bg_green, middle, center
+
+# O caso do Programming Historian
+
+```{r, out.width="20%"}
+knitr::include_graphics("img/ph.png")
+```
+
+---
+class: bg_yellow, middle, center
+
+## O que é? 
+<br>
+--
+
+### "Publicamos tutoriais acessíveis, avaliados por pares, que ajudam os humanistas a aprender uma ampla gama de ferramentas digitais, técnicas computacionais e metodologias de trabalho que facilitam a pesquisa e o ensino."
+
+---
+class: bg_yellow, middle, center
+## Vamos ver um exemplo? [Aqui](https://github.com/programminghistorian)
+<br>
+
+### "O Programming Historian tem como objetivo influenciar como a comunidade de história digital convida colaboradores, revisa seu trabalho e o publica." (McClurken,2016)
+
+---
+class: bg_green, middle, center
+
+# Seremos todos programadores?
+
+---
+class: bg_yellow, middle, center
+
+--
+
+### - O digital substituirá as ferramentas básicas da operação historiográfica?
+<br>
+
+--
+### - Como isso afeta a construção do conhecimento histórico?
+
+---
+class: bg_yellow, middle, center
+## Para saber mais sobre aspectos práticos do git e GitHub, [acesse o link](https://gitegithub.netlify.app/).
+
+---
+class: bg_yellow, middle, center
+
+## [Clique aqui](biblio.html) para acessar a bibliografia usada nessa apresentação
+<br>
+
+## E acesse nossa biblioteca de referências **História Digital** no Zotero, [clicando aqui](https://www.zotero.org/groups/2216280/histria_digital/library).
+---
+class: bg_yellow, middle, center
+
+## Eric Brasil
+<br>
+
+### Email: [ericbrasiln@proton.me](mailto:ericbrasiln@proton.me)
+
+### GitHub: [ericbrasiln](https://github.com/ericbrasiln/)
+
+### Twitter: [ericbrasiln](http://www.twitter.com/ericbrailn) 
+
+### [Orcid](https://orcid.org/0000-0001-5067-8475) - [Lattes](http://lattes.cnpq.br/6853705640900524)
+
+### [Site pessoal](https://ericbrasiln.github.io)
+
+---
+class: bg_yellow, middle, center
+
+```{r, out.width="25%"}
+knitr::include_graphics("img/logo_hist.png")
+```
+
+## Curso de Licenciatura em História
+
+### Instituto de Humanidades e Letras do campus dos Malês, Unilab
+
+### [Site do curso](historia.males.unilab.edu.br/) 
+
+### email: [historia.ba@unilab.edu.br ](mailto:historia.ba@unilab.edu.br)
+
+```{r, out.width="22%"}
+knitr::include_graphics("img/logo_unilab.png")
+```
+
+---
+class: bg_yellow, middle, center
+
+```{r, out.width="20%"}
+knitr::include_graphics("img/logo_MA_color.png")
+```
+
+## Laboratório de Humanidades Digitais da UFBA
+
+### Twitter: [labhdufba](https://twitter.com/labhdufba) 
+
+### Instagram: [labhdufba](http://instagram.com/labhdufba)
+
+### Github: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
+
+---
+class: title-slide-final, middle, center
+
+# Obrigado, gente!
+
+.pull-left[
+<br>
+
+## Agradecimentos especiais:
+<br> 
+
+## Ao Jimmy pelo convite e mediação, Juliana pela participação e ao público pela escuta e debate.
+]
+
+.pull-right[
+```{r, out.width="90%"}
+knitr::include_graphics("https://media2.giphy.com/media/3o6wNIV9FP28JIleyk/giphy.gif?cid=ecf05e47zu5xdrqbq7ehu5dmzo76n6nqww430nqs4z5ppy8b&rid=giphy.gif&ct=g")
+```
+]
