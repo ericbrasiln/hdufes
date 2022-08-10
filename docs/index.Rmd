@@ -3,7 +3,7 @@ title: "Humanidades e História Digital"
 subtitle: "<br>Pensando futuros (presentes?) da pesquisa<br><br><br><br><br>"
 description: "Live para o PPGH da UFES"
 author: "Eric Brasil (IHLM/UNILAB)<br>ericbrasiln@proton.me"
-date: "<br>10 de agosto de 2022<br><br>"
+date: "<br>10 de agosto de 2022<br><br>[![DOI](https://zenodo.org/badge/523121989.svg)](https://zenodo.org/badge/latestdoi/523121989)"
 encoding: "UTF-8"
 output:
   xaringan::moon_reader:
