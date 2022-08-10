@@ -3,7 +3,7 @@ title: "Humanidades e História Digital"
 subtitle: "<br>Pensando futuros (presentes?) da pesquisa<br><br><br><br><br>"
 description: "Live para o PPGH da UFES"
 author: "Eric Brasil (IHLM/UNILAB)<br>ericbrasiln@proton.me"
-date: "<br>10 de agosto de 2022<br><br>[![DOI - em breve](https://zenodo.org/badge/DOI/10.5281/zenodo.6566754.svg)](https://doi.org/10.5281/zenodo.6566754)"
+date: "<br>10 de agosto de 2022<br><br>"
 encoding: "UTF-8"
 output:
   xaringan::moon_reader:
@@ -41,7 +41,7 @@ library(widgetframe)
 ---
 class: bg_green, center, middle
 
-# Como é que se começa um projeto em história atualmente?
+# Como começamos um projeto em história atualmente?
 
 ---
 class: bg_yellow, center, middle
@@ -54,7 +54,7 @@ class: bg_yellow, center, middle
 <br>
 
 --
-### - Você já comprendeu "como suas fontes digitais foram criadas, e como ficaram disponíveis para você" (BLANEY, et al. 2021. p. 44)
+### - Você já compreendeu "como suas fontes digitais foram criadas, e como ficaram disponíveis para você" (BLANEY, et al. 2021. p. 44)
 
 ---
 class: bg_green, center, middle
@@ -68,7 +68,7 @@ class: bg_yellow, center, middle
 <br>
 
 --
-### -  Index Thomisticus
+### -  Index Thomisticus de Roberto Bussa em parceria com a IBM (1940-1970)
 <br>
 
 --
@@ -82,11 +82,11 @@ class: bg_green, center, middle
 ---
 class: bg_yellow, center, middle
 
-## Muitas histórias ao longo do século XX e XXI
+## Precisamos definir história digital ou fazer suas histórias?
 <br>
 
 --
-### - [Technology and the Historian: Transformations in the Digital](https://www.press.uillinois.edu/books/?id=p085697) Age de Adam Crymble
+### - [Technology and the Historian: Transformations in the Digital Age](https://www.press.uillinois.edu/books/?id=p085697) de Adam Crymble
 
 ---
 class: bg_yellow, center, middle
@@ -96,6 +96,10 @@ class: bg_yellow, center, middle
 
 --
 ### - [The Transformation of Historical Research in the Digital Age](https://www.cambridge.org/core/elements/transformation-of-historical-research-in-the-digital-age/30DFBEAA3B753370946B7A98045CFEF4#) de Ian Milligan
+<br>
+
+--
+### - Quem faz história digital está apenas preocupado com métodos e ferramentas?
 
 ---
 class: bg_green, center, middle
@@ -104,6 +108,15 @@ class: bg_green, center, middle
 ```{r, out.width="50%"}
 knitr::include_graphics("https://i.giphy.com/media/Xch9I90tRezyicQgma/giphy.webp")
 ```
+
+---
+class: bg_yellow, center, middle
+
+### - Risco de favorecer fontes e acervos dos gandes centros?
+<br>
+
+--
+### - Retornar para uma história distante das experiências sociais dos homens e mulheres 'de baixo'?
 
 ---
 class: bg_yellow, center, middle
@@ -121,10 +134,6 @@ class: bg_yellow, center, middle
 
 --
 ### - Como lidar com esses diferentes formatos?
-<br>
-
---
-### - Metadados? Navegar, descobrir e organizar. Mas também um objeto em si mesmo (BLANEY, et al. 2021. p. 61)
 
 ---
 class: bg_yellow, center, middle
@@ -147,33 +156,33 @@ class: bg_yellow, center, middle
 ---
 class: bg_yellow, center, middle
 
-## Como gerenciar seus dados e mantê-los seguros?
+## Como gerenciar seus dados e mantê-los seguros e recuperáveis?
 <br>
 
 --
-### - Metadados (como você descreve seus dados, tanto internamente quanto externamente)
+### 1. Metadados (como você descreve seus dados, tanto internamente quanto externamente)
 <br>
 
 --
-### - Controle de versões (o que fazer se você fizer uma lambança no processo)
+### 2. Controle de versões (o que fazer se você fizer uma lambança no processo)
 <br>
 
 --
-### - Documentação (uma descrição narrativa do projeto)
+### 3. Documentação (uma descrição narrativa do projeto)
 <br>
 
 --
-### - Preservação (como os dados podem ser mantidos para uso no futuro)
+### 4. Preservação (como os dados podem ser mantidos para uso no futuro)
 
 ---
 class: bg_yellow, center, middle
 
-## Colaboração, abertura, compartilhamento
+## Colaboração (interdisciplinaridade), abertura (open science) e transparência metodológica
 
 ---
 class: bg_green, middle, center
 
-# Seremos todos programadores?
+# Então, seremos todos programadores?
 
 ---
 class: bg_yellow, middle, center
@@ -184,10 +193,15 @@ class: bg_yellow, middle, center
 --
 ### - Como isso afeta a construção do conhecimento histórico?
 
+<br>
+
+--
+### - A formação acadêmica atual está efrentando essas questões?
 ---
 class: bg_yellow, middle, center
 
 ## Acesse a biblioteca de referências **História Digital** no Zotero, [clicando aqui](https://www.zotero.org/groups/2216280/histria_digital/library).
+
 ---
 class: bg_yellow, middle, center
 
@@ -237,6 +251,21 @@ knitr::include_graphics("img/logo_MA_color.png", error=FALSE)
 ### Instagram: [labhdufba](http://instagram.com/labhdufba)
 
 ### Github: [https://github.com/LABHDUFBA](https://github.com/LABHDUFBA)
+
+---
+class: bg_yellow, middle, center
+
+```{r, out.width="20%"}
+knitr::include_graphics("https://raw.githubusercontent.com/programminghistorian/jekyll/gh-pages/images/logos/ph-pt.svg", error=FALSE)
+```
+
+## The Programming Historian
+
+### Site: [https://programminghistorian.org/pt/](https://programminghistorian.org/pt/) 
+
+### Twitter: [ProgHist](https://twitter.com/ProgHist) 
+
+### Github: [https://github.com/programminghistorian](https://github.com/programminghistorian)
 
 ---
 class: title-slide-final, middle, center
